@@ -35,4 +35,4 @@ export function initCarousel() {
     track.addEventListener('mouseleave', () => {
         animate();
     });
-}
+}npm
