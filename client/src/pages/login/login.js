@@ -1,5 +1,5 @@
      // Google OAuth URL
-     const googleAuthUrl = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=805561252134-mgf46ljpbtpq115n08oeodpfobms76a6.apps.googleusercontent.com&redirect_uri=http://localhost:3000/auth/google/callback&response_type=code&scope=profile%20email';
+     const googleAuthUrl = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=805561252134-mgf46ljpbtpq115n08oeodpfobms76a6.apps.googleusercontent.com&redirect_uri=https://myakuntan-backend-production.up.railway.app/auth/google/callback&response_type=code&scope=profile%20email';
 
      // Event listener untuk tombol Google login
      const btn = document.getElementById("google-login-btn");
@@ -56,7 +56,7 @@
 
          try {
            const response = await fetch(
-             "http://localhost:3000/api/v1/auth/sessions",
+             "https://myakuntan-backend-production.up.railway.app/api/v1/auth/sessions",
              {
                method: "POST",
                headers: { "Content-Type": "application/json" },

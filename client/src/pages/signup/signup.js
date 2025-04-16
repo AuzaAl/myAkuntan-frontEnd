@@ -1,5 +1,4 @@
-const clientId = '805561252134-mgf46ljpbtpq115n08oeodpfobms76a6.apps.googleusercontent.com';
-const redirectUri = 'http://localhost:3000/auth/google/callback';
+const clientId = '805https://myakuntan-backend-production.up.railway.app/auth/google/callback';
 const responseType = "code";
 const scope = "profile email";
 const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=${responseType}&scope=${encodeURIComponent(scope)}`;
@@ -56,7 +55,7 @@ document
       type: "info",
       message: "Sedang Mendaftar...",
     })
-    const baseurl = `http://localhost:3000/api`;
+    const baseurl = `https://myakuntan-backend-production.up.railway.app/api`;
 
     try {
       const response = await fetch(baseurl + '/v1/users', {

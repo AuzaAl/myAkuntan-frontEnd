@@ -44,7 +44,7 @@ const notyfLogin = new Notyf({
 
 async function fetchUserId() {
   try {
-    const res = await fetch("http://localhost:3000/api/v1/users/me", {
+    const res = await fetch("ttps://myakuntan-backend-production.up.railway.app/api/v1/users/me", {
       credentials: "include",
     });
 
@@ -106,7 +106,7 @@ form.addEventListener("submit", async (e) => {
 
   const bidangUsaha = selected.value;
 
-  const baseurl = `http://localhost:3000/api`;
+  const baseurl = `ttps://myakuntan-backend-production.up.railway.app/api`;
 
   try {
     const response = await fetch(baseurl + `/users/${userId}/role`, {

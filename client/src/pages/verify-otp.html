@@ -238,7 +238,7 @@ left: 80px;
           verifyButton.classList.add("loading");
   
           try {
-            const response = await fetch("http://localhost:3000/api/v1/auth/otp/verify", {
+            const response = await fetch("https://myakuntan-backend-production.up.railway.app/api/v1/auth/otp/verify", {
               method: "POST",
               credentials: "include",
               headers: { "Content-Type": "application/json" },
@@ -282,7 +282,7 @@ left: 80px;
           resendButton.classList.add("loading");
   
           try {
-            const response = await fetch("http://localhost:3000/api/v1/auth/otp", {
+            const response = await fetch("hhttps://myakuntan-backend-production.up.railway.app/api/v1/auth/otp", {
               method: "POST",
               credentials: "include",
               headers: { "Content-Type": "application/json" },

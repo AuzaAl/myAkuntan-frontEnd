@@ -91,7 +91,7 @@
     let akunList = [];
   
     async function fetchUser() {
-      const res = await fetch("http://localhost:3000/v1/users/me", { credentials: 'include' });
+      const res = await fetch("https://myakuntan-backend-production.up.railway.app/v1/users/me", { credentials: 'include' });
       const data = await res.json();
       if (res.ok) {
         userId = data.data._id;
@@ -101,7 +101,7 @@
     }
   
     async function fetchAccounts() {
-      const res = await fetch(`http://localhost:3000/v1/users/${userId}/accounts`, { credentials: 'include' });
+      const res = await fetch(`https://myakuntan-backend-production.up.railway.appv1/users/${userId}/accounts`, { credentials: 'include' });
       const data = await res.json();
       if (res.ok) {
         akunList = data.data;
@@ -124,7 +124,7 @@
   
     async function fetchTransactions() {
       resultInput.innerHTML = `<tr><td colspan="5" class="text-center py-4">Memuat data...</td></tr>`;
-      const res = await fetch(`http://localhost:3000/v1/transactions?userId=${userId}`, {
+      const res = await fetch(`https://myakuntan-backend-production.up.railway.app/v1/transactions?userId=${userId}`, {
         credentials: "include"
       });
       const data = await res.json();
@@ -178,7 +178,7 @@
         akun_credit_id
       };
   
-      const res = await fetch("http://localhost:3000/v1/transactions", {
+      const res = await fetch("https://myakuntan-backend-production.up.railway.app/v1/transactions", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
